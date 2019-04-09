@@ -3,7 +3,7 @@ BlockTrail PHP SDK Changelog
 
 v3.3
 ------
- - Removed backwards compatibility with PHP < 7.1
+ - Removed backwards compatibility with older versions of PHP, PHP >= 7.1.3 now required
  - Removed unused or redundant dependencies
  - Removed unused deprecated functions from Blocktrail class
 
