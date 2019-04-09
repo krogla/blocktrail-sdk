@@ -1,5 +1,5 @@
 {
-    "name": "gwexchangers/blocktrail-sdk",
+    "name": "gwexchangers/blocktrail-sdk-php",
     "description": "PHP SDK for Blocktrail API - PHP 7.1+ and Symfony 4+",
     "authors": [
         {
