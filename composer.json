@@ -26,7 +26,7 @@
         "ext-gd": "*",
         "ext-dom": "*",
         "ext-curl": "*",
-        "bitwasp/bitcoin": "^1.0",
+        "bitwasp/bitcoin": "v0.0.35.0",
         "btccom/bitwasp-bitcoin-bch-addon": "^0.0.2",
         "btccom/justencrypt": "^0.2.0",
         "btccom/cashaddress": "^0.0.3",
