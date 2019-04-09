@@ -1,6 +1,12 @@
 BlockTrail PHP SDK Changelog
 ============================
 
+v3.3
+------
+ - Removed backwards compatibility with PHP < 7.1
+ - Removed unused or redundant dependencies
+ - Removed unused deprecated functions from Blocktrail class
+
 v3.0.0
 ------
  - New [Default] Wallet Version 3  

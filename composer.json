@@ -34,7 +34,6 @@
         "rych/hash_pbkdf2-compat": "^1.0",
         "dompdf/dompdf" : "0.8.*",
         "blocktrail/cryptojs-aes-php": "0.1.*",
-        "symfony/http-foundation": "4.*",
         "endroid/qr-code": "^3.5"
     },
     "require-dev": {

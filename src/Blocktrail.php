@@ -30,39 +30,4 @@ abstract class Blocktrail {
     const EXCEPTION_MISSING_ENDPOINT = "The endpoint you've tried to access does not exist. Check your URL.";
     const EXCEPTION_OBJECT_NOT_FOUND = "The object you've tried to access does not exist.";
 
-    /**
-     * @deprecated use BlocktrailSDK::toBTC instead
-     *
-     * convert a Satoshi value (int) to a BTC value (float)
-     *
-     * @param int       $satoshi
-     * @return float
-     */
-    public static function toBTC($satoshi) {
-        return BlocktrailSDK::toBTC($satoshi);
-    }
-
-    /**
-     * @deprecated use BlocktrailSDK::toBTCString instead
-     *
-     * convert a Satoshi value (int) to a BTC value (float) and return it as a string
-     *
-     * @param int       $satoshi
-     * @return string
-     */
-    public static function toBTCString($satoshi) {
-        return BlocktrailSDK::toBTCString($satoshi);
-    }
-
-    /**
-     * @deprecated use BlocktrailSDK::toSatoshi instead
-     *
-     * convert a BTC value (float) to a Satoshi value (int)
-     *
-     * @param float     $btc
-     * @return int
-     */
-    public static function toSatoshi($btc) {
-        return BlocktrailSDK::toSatoshi($btc);
-    }
 }

@@ -180,7 +180,7 @@ abstract class BaseRestClient implements RestClientInterface
 
         // normalize the query string the same way the server expects it
         /** @var Request $request */
-        $request = $request->withUri($uri->withQuery(\Symfony\Component\HttpFoundation\Request::normalizeQueryString($uri->getQuery())));
+        $request = $request->withUri($uri->withQuery($this->normalizeQueryString($uri->getQuery())));
 
         if (!$request->hasHeader('Date')) {
             $request = $request->withHeader('Date', $this->getRFC1123DateString());
@@ -268,4 +268,24 @@ abstract class BaseRestClient implements RestClientInterface
         $date = new \DateTime(null, new \DateTimeZone("UTC"));
         return str_replace("+0000", "GMT", $date->format(\DateTime::RFC1123));
     }
+
+	/**
+	 * Normalizes a query string.
+	 *
+	 * Builds a normalized query string, where keys/value pairs are alphabetized, have consistent escaping and unneeded delimiters are removed.
+	 *
+	 * @param string $qs Query string
+	 * @return string A normalized query string for the request
+	 */
+	private function normalizeQueryString($qs)
+	{
+		if ('' == $qs) {
+			return '';
+		}
+
+		parse_str($qs, $qs);
+		ksort($qs);
+
+		return http_build_query($qs, '', '&', PHP_QUERY_RFC3986);
+	}
 }
