@@ -5,7 +5,7 @@
         {
             "name": "Wanna Launch S.A.",
             "email": "wannalauch.dev@gmail.com"
-        },
+        }
     ],
     "autoload": {
         "psr-4": {
