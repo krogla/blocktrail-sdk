@@ -2,7 +2,9 @@ BlockTrail PHP SDK
 ==================
 
 This is a fork for the BlockTrail PHP SDK, updated for use within a Symfony 4 project.
-original project: https://github.com/blocktrail/blocktrail-sdk-php 
+
+Original project: https://github.com/blocktrail/blocktrail-sdk-php 
+
 Documentation: https://dev.btc.com/docs/php
 
 Requirements
