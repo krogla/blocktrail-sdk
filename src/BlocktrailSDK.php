@@ -175,7 +175,7 @@ class BlocktrailSDK implements BlocktrailSDKInterface {
         $this->blocktrailClient->setVerboseErrors($verboseErrors);
         $this->dataClient->setVerboseErrors($verboseErrors);
     }
-    
+
     /**
      * set cURL default option on Guzzle client
      * @param string    $key
@@ -410,7 +410,7 @@ class BlocktrailSDK implements BlocktrailSDKInterface {
         $response = $this->dataClient->get($this->converter->getUrlForTransactions($txhashes));
         return $this->converter->convertTxs($response->body());
     }
-    
+
     /**
      * get a paginated list of all webhooks associated with the api user
      * @param  integer          $page    pagination: page number
@@ -492,7 +492,7 @@ class BlocktrailSDK implements BlocktrailSDKInterface {
         $response = $this->blocktrailClient->get("webhook/{$identifier}/events", $this->converter->paginationParams($queryString));
         return self::jsonDecode($response->body(), true);
     }
-    
+
     /**
      * subscribes a webhook to transaction events of one particular transaction
      * @param  string  $identifier      the unique identifier of the webhook to be triggered
@@ -1999,7 +1999,7 @@ class BlocktrailSDK implements BlocktrailSDKInterface {
         usort($result, function (PublicKeyInterface $a, PublicKeyInterface $b) {
             $av = $a->getHex();
             $bv = $b->getHex();
-            return $av == $bv ? 0 : $av > $bv ? 1 : -1;
+            return $av == $bv ? 0 : ($av > $bv ? 1 : -1);
         });
 
         return $result;
